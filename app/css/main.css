@@ -1,1 +1,112 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+html {
+  box-sizing: border-box; }
+  html *, html *::before, html *::after {
+    box-sizing: inherit; }
+
+body {
+  font-family: "Lato", sans-serif;
+  color: white;
+  background: url("/img/audience.jpg") no-repeat fixed center;
+  background-size: cover; }
+
+header {
+  background: rgba(76, 49, 124, 0.967);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5; }
+  header .container {
+    padding: 0; }
+  header .fa {
+    float: left;
+    margin: 1.7rem 0 1.7rem 2rem;
+    font-size: 3.2rem;
+    color: white;
+    cursor: pointer; }
+    @media screen and (min-width: 845px) {
+      header .fa {
+        display: none; } }
+  header h5 {
+    margin: 0 4rem 0 0;
+    padding: 2rem 0; }
+    @media screen and (min-width: 845px) {
+      header h5 {
+        margin: 0;
+        padding: 1rem 0; } }
+
+.navbar {
+  clear: both;
+  display: none;
+  text-align: center; }
+  .navbar ul li {
+    display: block;
+    text-transform: uppercase; }
+    .navbar ul li a {
+      display: block;
+      opacity: 0.7;
+      padding: 1rem 0;
+      color: white;
+      text-decoration: none;
+      transition: all 0.1s; }
+      .navbar ul li a:hover {
+        opacity: 1; }
+  @media screen and (min-width: 845px) {
+    .navbar {
+      display: block; }
+      .navbar ul {
+        margin: 0; }
+        .navbar ul li {
+          display: inline-block; }
+          .navbar ul li a {
+            padding: 0 1rem; } }
+
+.expand {
+  display: block; }
+
+main {
+  margin-top: 10rem;
+  text-align: center;
+  padding: 5rem 0 10rem 0; }
+
+input[type="email"] {
+  border-radius: none; }
+
+input[type="submit"] {
+  background: #6240a0;
+  border-color: #6240a0;
+  color: white;
+  font-size: 1.4rem;
+  transition: all 0.1s; }
+  input[type="submit"]:hover {
+    background: #432c6d;
+    border-color: #432c6d;
+    color: white; }
+
+.footer {
+  text-align: center;
+  padding-top: 2rem;
+  background: rgba(98, 64, 160, 0.7); }
+
+.links {
+  list-style-type: none; }
+  .links a {
+    text-decoration: none;
+    color: white; }
+
+.fa-twitch {
+  color: white;
+  font-size: 2.6rem;
+  margin: 0 1rem; }
+
+.fa-twitter {
+  color: #4fabee;
+  font-size: 2.6rem;
+  margin: 0 1rem; }
+
+.fa-facebook-official {
+  color: #5d87d5;
+  font-size: 2.6rem;
+  margin: 0 1rem; }

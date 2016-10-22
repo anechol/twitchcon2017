@@ -3,13 +3,122 @@
 
 // VARIABLES
 $purple: hsl(261, 43%, 44%)
+$twitter-blue: hsl(205, 82%, 62%)
+$facebook-blue: hsl(219, 59%, 60%)
+
+$font: 'Lato', sans-serif
 
 // MIXINS
 
 // MAIN STYLING
+html
+	box-sizing: border-box
+	*, *::before, *::after
+		box-sizing: inherit
+
+body
+	font-family: $font
+	color: white
+	background: url('/img/audience.jpg') no-repeat fixed center
+	background-size: cover
 
 // HEADER
+header
+	background: transparentize(darken($purple, 10%), 0.033)
+	position: fixed
+	text-align: center
+	top: 0
+	left: 0
+	right: 0
+	z-index: 5
+	.container
+		padding: 0
+	.fa
+		float: left
+		margin: 1.7rem 0 1.7rem 2rem
+		font-size: 3.2rem
+		color: white
+		cursor: pointer
+		@media screen and (min-width: 845px)
+			display: none
+	h5
+		margin: 0 4rem 0 0
+		padding: 2rem 0
+		@media screen and (min-width: 845px)
+			margin: 0
+			padding: 1rem 0
+
+.navbar
+	clear: both
+	display: none
+	text-align: center
+	ul
+		li
+			display: block
+			text-transform: uppercase
+			a
+				display: block
+				opacity: 0.7
+				padding: 1rem 0
+				color: white
+				text-decoration: none
+				transition: all 0.1s
+				&:hover
+					opacity: 1
+	@media screen and (min-width: 845px)
+		display: block
+		ul
+			margin: 0
+			li
+				display: inline-block
+				a
+					padding: 0 1rem
+
+.expand
+	display: block
 
 // MAIN SECTION
+main
+	margin-top: 10rem
+	text-align: center
+	padding: 5rem 0 10rem 0
+
+input[type="email"]
+	border-radius: none
+
+input[type="submit"]
+	background: $purple
+	border-color: $purple
+	color: white
+	font-size: 1.4rem
+	transition: all 0.1s
+	&:hover
+		background: darken($purple, 14%)
+		border-color: darken($purple, 14%)
+		color: white
 
 //FOOTER
+.footer
+	text-align: center
+	padding-top: 2rem
+	background: transparentize($purple, 0.3)
+.links
+	list-style-type: none
+	a
+		text-decoration: none
+		color: white
+
+.fa-twitch
+	color: white
+	font-size: 2.6rem
+	margin: 0 1rem
+
+.fa-twitter
+	color: $twitter-blue
+	font-size: 2.6rem
+	margin: 0 1rem
+
+.fa-facebook-official
+	color: $facebook-blue
+	font-size: 2.6rem
+	margin: 0 1rem
