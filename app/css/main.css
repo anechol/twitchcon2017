@@ -11,8 +11,10 @@ html {
 body {
   font-family: "Lato", sans-serif;
   color: white;
-  background: url("/img/audience.jpg") no-repeat fixed center;
-  background-size: cover; }
+  background: url("/img/audience.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
 
 header {
   background: rgba(76, 49, 124, 0.967);
