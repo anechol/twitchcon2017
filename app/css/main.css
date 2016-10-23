@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
 html {
   box-sizing: border-box; }
   html *, html *::before, html *::after {
     box-sizing: inherit; }
+  html h1, html h2, html h3, html h4, html h5, html h6 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -29,13 +33,16 @@ header {
     @media screen and (min-width: 845px) {
       header .fa {
         display: none; } }
-  header h5 {
-    margin: 0 4rem 0 0;
-    padding: 2rem 0; }
+  header .title {
+    display: inline-block;
+    text-decoration: none;
+    color: white; }
+    header .title h4 {
+      margin: 1.5rem auto;
+      font-weight: 400; }
     @media screen and (min-width: 845px) {
-      header h5 {
-        margin: 0;
-        padding: 1rem 0; } }
+      header .title h4 {
+        margin: 1rem auto; } }
 
 .navbar {
   clear: both;
@@ -47,10 +54,9 @@ header {
     .navbar ul li a {
       display: block;
       opacity: 0.7;
-      padding: 1rem 0;
+      padding: 0.8rem 0;
       color: white;
-      text-decoration: none;
-      transition: all 0.1s; }
+      text-decoration: none; }
       .navbar ul li a:hover {
         opacity: 1; }
   @media screen and (min-width: 845px) {
@@ -67,12 +73,16 @@ header {
   display: block; }
 
 main {
-  margin-top: 10rem;
+  margin-top: 12rem;
   text-align: center;
   padding: 5rem 0 10rem 0; }
 
 input[type="email"] {
-  border-radius: none; }
+  color: #57398e;
+  border: none;
+  transition: all 0.8s; }
+  input[type="email"]:focus {
+    border: 1px solid #6240a0; }
 
 input[type="submit"] {
   background: #6240a0;
@@ -85,16 +95,27 @@ input[type="submit"] {
     border-color: #432c6d;
     color: white; }
 
+.wrapper {
+  position: relative;
+  min-height: 100%; }
+
 .footer {
   text-align: center;
-  padding-top: 2rem;
+  margin-top: 3rem;
+  padding: 2rem 0 1rem 0;
   background: rgba(98, 64, 160, 0.7); }
 
 .links {
-  list-style-type: none; }
+  list-style-type: none;
+  margin: 0; }
   .links a {
-    text-decoration: none;
-    color: white; }
+    color: white;
+    text-decoration: none; }
+    .links a:hover {
+      color: #b4a0d9; }
+  @media screen and (min-width: 845px) {
+    .links li {
+      display: inline-block; } }
 
 .fa-twitch {
   color: white;
@@ -110,3 +131,10 @@ input[type="submit"] {
   color: #5d87d5;
   font-size: 2.6rem;
   margin: 0 1rem; }
+
+.privacy {
+  margin: 0;
+  text-decoration: none;
+  color: white; }
+  .privacy:hover {
+    color: #b4a0d9; }

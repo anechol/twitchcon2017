@@ -1,11 +1,14 @@
 // FONTS
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700')
 
 // VARIABLES
 $purple: hsl(261, 43%, 44%)
+$white: hsl(261, 0%, 100%)
 $twitter-blue: hsl(205, 82%, 62%)
 $facebook-blue: hsl(219, 59%, 60%)
 
+$heading: 'Roboto Condensed', sans-serif
 $font: 'Lato', sans-serif
 
 // MIXINS
@@ -15,10 +18,13 @@ html
 	box-sizing: border-box
 	*, *::before, *::after
 		box-sizing: inherit
+	h1, h2, h3, h4, h5, h6
+		font-family: $heading
+		font-weight: 700
 
 body
 	font-family: $font
-	color: white
+	color: $white
 	background: url('/img/audience.jpg') no-repeat fixed center
 	background-size: cover
 
@@ -37,16 +43,20 @@ header
 		float: left
 		margin: 1.7rem 0 1.7rem 2rem
 		font-size: 3.2rem
-		color: white
+		color: $white
 		cursor: pointer
 		@media screen and (min-width: 845px)
 			display: none
-	h5
-		margin: 0 4rem 0 0
-		padding: 2rem 0
+	.title
+		display: inline-block
+		text-decoration: none
+		color: $white
+		h4
+			margin: 1.5rem auto
+			font-weight: 400
 		@media screen and (min-width: 845px)
-			margin: 0
-			padding: 1rem 0
+			h4
+				margin: 1rem auto
 
 .navbar
 	clear: both
@@ -59,10 +69,9 @@ header
 			a
 				display: block
 				opacity: 0.7
-				padding: 1rem 0
-				color: white
+				padding: 0.8rem 0
+				color: $white
 				text-decoration: none
-				transition: all 0.1s
 				&:hover
 					opacity: 1
 	@media screen and (min-width: 845px)
@@ -79,37 +88,53 @@ header
 
 // MAIN SECTION
 main
-	margin-top: 10rem
+	margin-top: 12rem
 	text-align: center
 	padding: 5rem 0 10rem 0
 
 input[type="email"]
-	border-radius: none
+	color: darken($purple, 5%)
+	border: none
+	transition: all 0.8s
+	&:focus
+		border: 1px solid $purple
 
 input[type="submit"]
 	background: $purple
 	border-color: $purple
-	color: white
+	color: $white
 	font-size: 1.4rem
 	transition: all 0.1s
 	&:hover
 		background: darken($purple, 14%)
 		border-color: darken($purple, 14%)
-		color: white
+		color: $white
 
 //FOOTER
+.wrapper
+	position: relative
+	min-height: 100%
+
 .footer
 	text-align: center
-	padding-top: 2rem
+	margin-top: 3rem
+	padding: 2rem 0 1rem 0
 	background: transparentize($purple, 0.3)
+
 .links
 	list-style-type: none
+	margin: 0
 	a
+		color: $white
 		text-decoration: none
-		color: white
+		&:hover
+			color: lighten($purple, 30%)
+	@media screen and (min-width: 845px)
+		li
+			display: inline-block
 
 .fa-twitch
-	color: white
+	color: $white
 	font-size: 2.6rem
 	margin: 0 1rem
 
@@ -122,3 +147,10 @@ input[type="submit"]
 	color: $facebook-blue
 	font-size: 2.6rem
 	margin: 0 1rem
+
+.privacy
+	margin: 0
+	text-decoration: none
+	color: $white
+	&:hover
+		color: lighten($purple, 30%)
