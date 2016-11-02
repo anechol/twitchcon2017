@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
 html {
+  height: 100%;
   box-sizing: border-box; }
   html *, html *::before, html *::after {
     box-sizing: inherit; }
@@ -9,6 +10,10 @@ html {
     font-weight: 700; }
 
 body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: "Lato", sans-serif;
   color: white;
   background: url("/img/audience.jpg") no-repeat;
@@ -41,7 +46,7 @@ header {
     color: white; }
     header .title h4 {
       margin: 1.5rem auto;
-      font-weight: 400; }
+      font-weight: 700; }
     @media screen and (min-width: 845px) {
       header .title h4 {
         margin: 1rem auto; } }
@@ -75,31 +80,37 @@ header {
   display: block; }
 
 main {
-  margin-top: 12rem;
-  text-align: center;
-  padding: 5rem 0 10rem 0; }
+  margin: 35% auto;
+  align-self: center;
+  text-align: center; }
+  main .twitch {
+    color: #8969c3; }
+  main p {
+    color: #79c2f6;
+    font-weight: 700; }
+
+form {
+  border: none;
+  border-radius: none; }
 
 input[type="email"] {
   color: #57398e;
+  width: 225px;
   border: none;
-  transition: all 0.8s; }
-  input[type="email"]:focus {
-    border: 1px solid #6240a0; }
+  border-radius: 0; }
 
 input[type="submit"] {
   background: #6240a0;
   border-color: #6240a0;
+  border-radius: 0;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  width: 225px;
   transition: all 0.1s; }
   input[type="submit"]:hover {
     background: #432c6d;
     border-color: #432c6d;
     color: white; }
-
-.wrapper {
-  position: relative;
-  min-height: 100%; }
 
 .footer {
   text-align: center;
@@ -108,8 +119,7 @@ input[type="submit"] {
   background: rgba(98, 64, 160, 0.7); }
 
 .links {
-  list-style-type: none;
-  margin: 0; }
+  list-style-type: none; }
   .links a {
     color: white;
     text-decoration: none; }
